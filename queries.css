@@ -1,0 +1,360 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/* BELOW 1344px (Smaller desktops) */
+@media (max-width: 84em) {
+    .hero {
+        max-width: 120rem;
+    }
+
+    .cta-text-box {
+        padding: 4.8rem 8rem 6.4rem 10rem;
+    }
+}
+
+
+/* 1200px/16px = 75 = 75em */
+/* BELOW 12OOpx (Landscape Tablets) */
+@media (max-width: 75em) {
+    html {
+        /* 9px / 16px = 56.25 */
+        font-size: 56.25%;
+    }
+
+    .grid {
+        column-gap: 1rem;
+    }
+
+    .header {
+        padding: 0 3.2rem;
+    }
+
+    .main-nav-list {
+        gap: 4.8rem;
+    }
+
+    .hero {
+        gap: 4.8rem;
+    }
+
+    .skills-section {
+        max-width: 70rem;
+    }
+
+    .process-section {
+        max-width: 100rem;
+    }
+
+    .project-section {
+        padding: 6rem 0 8rem;
+    }
+
+
+    .cta-text-box {
+        padding: 4.8rem 2rem 6.4rem 8rem;
+    }
+}
+
+
+/* 940px/16px = 58.75 =(rounded up) 59em
+59*16 = 944em */
+/* BELOW 944px (Tablets) */
+@media (max-width: 59em) {
+    html {
+        /* 8px / 16px = 50 */
+        font-size: 50%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 0 8rem;
+        gap: 10rem;
+    }
+
+    .hero-text-box {
+        text-align: center;
+    }
+
+    .hero-img {
+        width: 40%;
+    }
+
+    .skills-section {
+        padding: 8rem 0 4rem;
+    }
+
+    /* Mobile Navigation*/
+.btn-mobile-nav {
+    display: block;
+    z-index: 1000;
+}
+
+.hero-img-box {
+    z-index: ;
+}
+
+.main-nav {
+    background-color: rgba(255, 255, 255, 0.906);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation */
+    /* display: none; -o-animation-delay: padding: ;;allows no transitions at all */
+    
+     /* 1) Hide it visually */  
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+    
+    /* 1) Hide it from screen readers */
+    visibility: hidden;
+     
+}
+
+.nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+}
+
+.nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+}
+
+
+.main-nav-list {
+    flex-direction: column;
+    gap: 6.4rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+    font-size: 3rem;
+}
+
+}
+
+
+/* 750px/16px = 46.88 =(rounded up) 47em
+47*16 = 752px */
+/* BELOW 752px (Small Tablets) */
+@media (max-width: 47em) {
+
+    .project-item {
+        width: 80%;
+    }
+
+    .cta {
+        margin-left: 12rem;
+        margin-right: 12rem; 
+    }
+
+    .cta-text-box {
+        padding: 4.8rem 0 6.4rem 2rem;
+    }
+
+}
+
+
+/* 600px/16px = 37.5 =(rounded up) 38em
+38*16 = 608px */
+/* BELOW 608px (Small Tablets) */
+@media (max-width: 38em) {
+
+    .hero-description {
+        margin-bottom: 3.2rem;
+    }
+
+    .hero {
+        gap: 4.8rem;
+    }
+
+    .hero-img {
+        width: 75%;
+    }
+
+    .skills-section {
+        padding: 4.8rem 0 3.2rem
+    }
+
+    .process-section {
+        padding: 1.6rem 0 3.2rem; 
+    }
+
+    .project-section {
+        padding: 3.2rem 0 6.4rem;
+    }
+
+    .project-item {
+        width: 90%;
+    }
+
+    .grid {
+        row-gap: 6.4rem;
+    }
+}
+
+/* 550px/16px = 34.38 =(rounded down) 34em
+34*16 = 544px */
+/* BELOW 544px (Phone) */
+@media (max-width: 34em) {
+    .grid--2-cols {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-item {
+        width: 80%;
+    }
+
+    .cta {
+        margin-left: 6rem;
+        margin-right: 6rem; 
+    }
+
+}
+
+
+/* 444px/16px = 27.75 =(rounded up) 28em
+28*16 = 448px */
+/* BELOW 448px (Phone) */
+@media (max-width: 28em) {
+    .hero {
+        padding: 0 3.2rem;
+    }
+
+    .section-hero {
+        padding: 4.8rem 0;
+    }
+
+    .logos {
+        padding: 0;   
+    }
+
+    .logos img {
+        height: 2.4rem;
+    }
+}
+
+/* 367px/16px = 22.93 =(rounded up) 23em
+23*16 = 368px */
+/* BELOW 368px (Phone) */
+@media (max-width: 23em) {
+
+    .btn,
+    .btn:link,
+    .btn:visited {
+        padding: 2.4rem 1.6rem;
+    }
+
+    .section-hero {
+        padding: 2.4rem 0;
+    }
+
+    .project-item {
+        width: 90%;
+    }
+
+    .cta {
+        margin-left: 2rem;
+        margin-right: 2rem; 
+    }
+
+}
+
+/* 367px/16px = 22.93 =(rounded up) 23em
+23*16 = 368px */
+/* BELOW 368px (Phone) */
+@media (max-width: 19.6875em) {
+    .btn,
+    .btn:link,
+    .btn:visited {
+        margin-bottom: 2rem;
+    }
+
+    .hero-description {
+        margin-bottom: 1.6rem;
+    }
+
+    .hero {
+        gap: 1.2rem;
+    }
+}
+
+/* ////////////////////////// */
+/* Fixing Safari Flex-box gap issue */
+/* ///////////////////////// */
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 4.8rem;
+  }
+  
+  .no-flexbox-gap .list-item:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+  
+  .no-flexbox-gap .list-icon:not(:last-child) {
+    margin-right: 1.6rem;
+  }
+  
+  .no-flexbox-gap .delivered-faces {
+    margin-right: 1.6rem;
+  }
+  
+  .no-flexbox-gap .meal-attribute:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  
+  .no-flexbox-gap .meal-icon {
+    margin-right: 1.6rem;
+  }
+  
+  .no-flexbox-gap .footer-row div:not(:last-child) {
+    margin-right: 6.4rem;
+  }
+  
+  .no-flexbox-gap .social-links li:not(:last-child) {
+    margin-right: 2.4rem;
+  }
+  
+  .no-flexbox-gap .footer-nav li:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+  
+  @media (max-width: 75em) {
+    .no-flexbox-gap .main-nav-list li:not(:last-child) {
+      margin-right: 3.2rem;
+    }
+  }
+  
+  @media (max-width: 59em) {
+    .no-flexbox-gap .main-nav-list li:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 4.8rem;
+    }
+  }
+
+/*
+- Font sizes (px):
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+    */
+
+    /*
+- Spacing system (px):
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+    */
